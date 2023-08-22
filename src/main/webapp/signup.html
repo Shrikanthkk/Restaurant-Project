@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <form action="signup" method="post" enctype="multipart/form-data">
+    <fieldset style= "width: 700px; height: 700PX;">
+        <legend>
+           SIGN UP
+        </legend>
+        
+    
+        <table>
+            <tr>
+                <td><label for="user">FIRST NAME:</label></td>
+                
+                <td><input type="text" name="user" id="user" placeholder="Enter Fist Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">password:</label></td>
+                <td><input type="password" name="password" id="password" placeholder="Password"></td>
+               
+                <tr>
+                    <td><label for="ema7il">Email ID:</label>
+                    </td>
+                    <td> <input type="tel" name="email" id="email" placeholder=" Enter Email Id"required ></td>
+                </tr><tr>
+                    <td><label for="dob">DOB:</label></td>
+                    <td><input type="date" name="dob" id="dob"required></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="pon">PHONE NO:</label></td>
+                    <td><input type="number" name="pon" id="pon"placeholder="Enter the Phone No."required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="qual">COUNTRY</label>
+                        <td><select name="qual" id="qual" required>
+                            <option >SELECT</option>
+                            <option >INDIA</option>
+                            <option >USA</option>
+                            <option >CHINA</option>
+                            <option >JAPAN</option>
+                        </select></td>
+                        
+                    </td>
+                </tr>
+                    <tr>`
+                        <td><label for="gen">GENDER</label></td>
+                        <td>Male<input type="radio" name="gen" id="gen" value="male">
+                        Female<input type="radio" name="gen" id="gen" value="female">
+                        Others<input type="radio" name="gen" id="gen" value="others"></td>
+                    </tr>
+                    <tr>
+						<td><label for="pic">
+							<h3>Image</h3>
+						</label></td>
+						<td><input type="file" name="picture" value="upload Image"></td>
+					</tr>
+                
+                        <tr>
+                            <td>
+                                <input type="submit" value="submit">
+                                <input type="button" value="cancel">
+                            </td>
+                        </tr>
+                        </tr>
+                    </tr>
+                </tr>
+            </tr>
+        </table>
+    
+    </fieldset>
+   
+</form>
+</body>
+</html>
