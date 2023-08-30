@@ -1,5 +1,6 @@
 package ddo;
 
+import java.security.PublicKey;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,6 +9,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import dao.Customer;
+import dao.Items;
 
 public class Mydao {
 	EntityManagerFactory e= Persistence.createEntityManagerFactory("dev");
@@ -20,6 +22,11 @@ public class Mydao {
 		t.commit();
 		
 		
+	}
+	public void item(Items items) {
+		t.begin();
+		m.persist(items);
+		t.commit();
 	}
 
 	public Customer fetchByEmail(String email) {
@@ -39,6 +46,21 @@ public class Mydao {
 		}else {
 			return list.get(0);
 		}
+
+		
+		}
+	public List<Items> fetchAllFoodItem(){
+		return m.createQuery("select x from Items x").getResultList();
 	}
+	public Items find(int id) {
+	
+		return m.find(Items.class, id);
+	}
+	public void delete(Items item) {
+		t.begin();
+		m.remove(item);
+		t.commit();
+	}
+	
 
 }
